@@ -3,41 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://orange-mingzzz.github.io/about/</loc>
+    <loc>https://orangebee.github.io/about/</loc>
     <lastmod>2019-06-22T02:16:19+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://orange-mingzzz.github.io/</loc>
+    <loc>https://orangebee.github.io/</loc>
     <lastmod>2019-06-22T02:16:19+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://orange-mingzzz.github.io/post/hello_world/</loc>
+    <loc>https://orangebee.github.io/post/hello_world/</loc>
     <lastmod>2019-06-21T00:01:22+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://orange-mingzzz.github.io/tags/hugo/</loc>
-    <lastmod>2019-06-21T00:01:22+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://orange-mingzzz.github.io/post/</loc>
+    <loc>https://orangebee.github.io/tags/hugo/</loc>
     <lastmod>2019-06-21T00:01:22+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://orange-mingzzz.github.io/tags/</loc>
+    <loc>https://orangebee.github.io/post/</loc>
     <lastmod>2019-06-21T00:01:22+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://orange-mingzzz.github.io/categories/</loc>
+    <loc>https://orangebee.github.io/tags/</loc>
+    <lastmod>2019-06-21T00:01:22+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://orangebee.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
