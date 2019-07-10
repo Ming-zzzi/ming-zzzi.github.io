@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
 
   
-  <title>Hugo建站填坑记录</title>
+  <title>用Hugo和Github Pages搭建个人博客</title>
 
   
   
@@ -26,25 +26,25 @@
 
   
   <meta name="author" content="ming_zzz">
-  <meta name="description" content="前言 这篇文章记录了在用hugo建站过程时发生的问题和原因分析。
+  <meta name="description" content="记录使用Hugo和Github Pages建站的基本过程，方便以后浏览。
 ">
 
   
   
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@ming_zzzz">
-    <meta name="twitter:title" content="Hugo建站填坑记录">
-    <meta name="twitter:description" content="前言 这篇文章记录了在用hugo建站过程时发生的问题和原因分析。
+    <meta name="twitter:title" content="用Hugo和Github Pages搭建个人博客">
+    <meta name="twitter:description" content="记录使用Hugo和Github Pages建站的基本过程，方便以后浏览。
 ">
     <meta name="twitter:image" content="/images/avatar.png">
   
 
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Hugo建站填坑记录">
-  <meta property="og:description" content="前言 这篇文章记录了在用hugo建站过程时发生的问题和原因分析。
+  <meta property="og:title" content="用Hugo和Github Pages搭建个人博客">
+  <meta property="og:description" content="记录使用Hugo和Github Pages建站的基本过程，方便以后浏览。
 ">
-  <meta property="og:url" content="https://orangebee.github.io/post/hugo_problems_summary/">
+  <meta property="og:url" content="https://orangebee.github.io/post/hugo&#43;githubpage/">
   <meta property="og:image" content="/images/avatar.png">
 
 
@@ -53,7 +53,7 @@
 <meta name="generator" content="Hugo 0.55.6">
 
 
-<link rel="canonical" href="https://orangebee.github.io/post/hugo_problems_summary/">
+<link rel="canonical" href="https://orangebee.github.io/post/hugo&#43;githubpage/">
 
 <meta name="renderer" content="webkit">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -219,8 +219,8 @@
 
   <section class="main post-detail">
     <header class="post-header">
-      <h1 class="post-title">Hugo建站填坑记录</h1>
-      <p class="post-meta">@ming_zzz · Jun 27, 2019 · 1 min read
+      <h1 class="post-title">用Hugo和Github Pages搭建个人博客</h1>
+      <p class="post-meta">@ming_zzz · Jul 4, 2019 · 1 min read
         
         · category:
           
@@ -229,55 +229,123 @@
         
       </p>
     </header>
-    <article class="post-content"><h2 id="前言">前言</h2>
+    <article class="post-content"><p>记录使用Hugo和Github Pages建站的基本过程，方便以后浏览。</p>
 
-<p>这篇文章记录了在用hugo建站过程时发生的问题和原因分析。</p>
+<p><img src=https://orangebee.github.io/media/hugo_pic.png width="50%"></p>
 
-<h2 id="填坑记录">填坑记录</h2>
+<h2 id="安装hugo">安装Hugo</h2>
 
-<h3 id="record-1">Record 1</h3>
+<p>hugo是一款由Go语言实现的静态网站快速生成框架。简单、易用、高效、易扩展、快速部署</p>
 
-<p>❓问题：hugo的一个好处就是安装，建站，下载主题都可以通过在终端输入命令行的方式简单完成。我选择的主题是hugo-nuo，在本地预览该主题时，发现新建的helloworld.md文件无法在网页中显示出来。</p>
+<h3 id="macos系统">MacOS系统</h3>
 
-<p>🌟原因：按照hugo官方向导在新建了posts文件夹然后在文件夹里建了helloworld.md文件，然而nuo主题对应的其实是post文件夹，所以将文件夹名“posts”改为“post”之后，文章就可以正常显示了。</p>
+<ul>
+<li>在终端利用brew命令安装Hugo</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">brew install hugo</code></pre></div>
+<p>brew的安装方法在<a href="https://brew.sh/">这里</a></p>
 
-<h3 id="record-2">Record 2</h3>
+<h3 id="windows系统">Windows系统</h3>
 
-<p>❓问题：想在helloworld.md中显示出其分类（categories）标志，于是修改了layouts/post文件夹下的summary和single.html文件里的对应部分。但是预览的时候文章内分类部分并没有显示出来。</p>
+<ul>
+<li>根据官网提供的<a href="https://github.com/gohugoio/hugo/releases">网站</a>下载对应系统的Hugo安装包，将解压出来的文件复制或移动到自己新建的<code>..\Hugo\bin</code>文件夹中
 
-<p>🌟原因：修改ummary和single.html文件时，没有注意helloworld中定义分类时写的是&rdquo;category&rdquo;，导致html文件里的和md文件里的对应不上。将html文件的对应部分改成&rdquo;category&rdquo;就可以正常显示了。</p>
+<ul>
+<li>建议安装带有<code>extended</code>的安装包，否则可能会出现<a href="https://orangebee.github.io/post/hugo_problems_summary/">文章</a>中<code>Record 4</code>问题。比如我安装的是<code>hugo_extended_0.55.6_Windows-64bit.zip</code></li>
+</ul></li>
+<li>将之前解压出来的文件中的<code>hugo.exe</code>添加到环境变量的PATH中</li>
+</ul>
 
-<h3 id="record-3">Record 3</h3>
+<h3 id="验证">验证</h3>
 
-<p>❓问题：点击主页的category子页面，无法显示出分类标签。</p>
+<ul>
+<li>安装完之后运行以下命令，如果显示出hugo版本号则说明安装成功</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">hugo version</code></pre></div>
+<h2 id="新建网站">新建网站</h2>
 
-<p>🌟原因：md文件中的定义分类的代码写错了。hugo默认的Taxonomies是</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">[<span style="color:#a6e22e">taxonomies</span>]
-  <span style="color:#a6e22e">category</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;categories&#34;</span>
-  <span style="color:#a6e22e">tag</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;tags&#34;</span>
-</code></pre></div>
-<p>但是我写成了&rdquo;category&rdquo;，因此将md文件定义分类的代码改成&rdquo;categories&rdquo;，并同时修改summary和single.html文件对应的部分为&rdquo;categories&rdquo;，此时分类子页面就可以正常显示出分类标签了。</p>
+<ul>
+<li>运行以下命令将网站存放在自定义文件夹中,如果建立成功则会看到相应提示。</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">hugo new site myblog <span style="color:#75715e">#放在电脑根目录下的文件夹myblog中</span></code></pre></div>
+<h2 id="添加主题">添加主题</h2>
 
-<p><em>小声bb：你怎么总是因为单词单复数出问题？！</em> 😭</p>
+<ul>
+<li>Hugo官方提供了许多<a href="https://themes.gohugo.io/">主题</a>可供选择~主题的详细页面上通常都会有主题的添加方法。<br />
+例如我选择的hugo-nuo主题的安装方法如下：</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">cd themes <span style="color:#75715e">#移动到myblog文件夹下的themes文件夹里</span>
+git clone https:<span style="color:#f92672">//</span>github<span style="color:#f92672">.</span>com<span style="color:#f92672">/</span>laozhu<span style="color:#f92672">/</span>hugo<span style="color:#f92672">-</span>nuo</code></pre></div>
+<p>每个主题都可以根据自己的喜好来作相应的修改，例如改变图片、字体、颜色，修改内容模块等等。具体如何修改需要阅读主题的说明文件以及模块代码</p>
 
-<h3 id="record-4">Record 4</h3>
+<h2 id="创建文档">创建文档</h2>
 
-<p>❓问题：在win10系统下运行<code>hugo server</code>命令时，出现以下error：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">error: failed to transform resource: TOCSS: failed to transform <span style="color:#e6db74">&#34;styles/main-rendered.scss&#34;</span> (text<span style="color:#f92672">/</span>x<span style="color:#f92672">-</span>scss)<span style="color:#f92672">:</span> this feature
- is not available in your current Hugo version, see https:<span style="color:#f92672">//</span>goo.gl<span style="color:#f92672">/</span>YMrWcn <span style="color:#66d9ef">for</span> more information</code></pre></div>
-<p>🌟原因：应该安装“hugo-extended”版本，将scss文件编译为css文件。原解决方法可以在<a href="https://github.com/laozhu/hugo-nuo/issues/124">这里</a>找到。</p>
+<h3 id="一般性文档">一般性文档</h3>
 
+<ul>
+<li>cd到myblog目录下后，在post文件夹下生成新文档</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">hugo new post<span style="color:#f92672">/</span>helloword<span style="color:#f92672">.</span>md <span style="color:#75715e">#生成名为helloword的md文件</span></code></pre></div>
+<p>使用VS Code等工具打开helloword文件后可以对内容进行编辑。文档的默认格式可以在<code>myblog/archetypes/default.md</code>下进行修改</p>
+
+<h3 id="说明性文档">说明性文档</h3>
+
+<ul>
+<li>cd到myblog目录下后生成新文档</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">hugo new about<span style="color:#f92672">.</span>md <span style="color:#75715e">#生成名为about的md文件</span></code></pre></div>
+<p>具体的页面设置方式请参考<a href="https://github.com/laozhu/hugo-nuo">hugo-nuo的说明文档</a></p>
+
+<h2 id="本地预览">本地预览</h2>
+
+<ul>
+<li>运行以下命令后，在浏览器里输入<code>http://localhost:1313/</code>即可查看网站内容</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">hugo server</code></pre></div>
+<p>启动<code>hugo server</code>之后无需退出，保存好文档之后即可同步预览修改内容，非常方便</p>
+
+<h2 id="部署到github-pages上">部署到Github Pages上</h2>
+
+<p><img src=https://orangebee.github.io/media/github_pages.png width="40%"></p>
+
+<ul>
+<li>在<a href="https://github.com/">Github</a>上申请一个账号然后登陆</li>
+<li>在首页点击<code>New repository</code>，进入页面后在<code>Repository name</code>下输入<code>username.github.io</code>后点击<code>create repository</code>。创建成功后会得到类似这样一个网址：<code>https://github.com/Githun账号username/Githun账号username.github.io.git</code>记一下之后会用到<br />
+注意<code>username</code>一定要写自己Github账号的username，否则你的网站域名会变得不美观</li>
+<li>创建完仓库之后，cd到myblog文件夹目录下输入以下命令</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">hugo</code></pre></div>
+<p>运行此命令后会生成网站的静态页面并全部存放到myblog文件夹的public目录下。</p>
+
+<ul>
+<li>运行以下命令将public目录下的所有文件push到刚刚创建的repository的master分支里</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">cd public
+git init
+git remote add origin https:<span style="color:#f92672">//</span>github<span style="color:#f92672">.</span>com<span style="color:#f92672">/</span>Github账号username<span style="color:#f92672">/</span>Github账号username<span style="color:#f92672">.</span>github<span style="color:#f92672">.</span>io<span style="color:#f92672">.</span>git
+git add <span style="color:#f92672">-</span>A
+git commit <span style="color:#f92672">-</span>m <span style="color:#e6db74">&#34;first commit&#34;</span>
+git push <span style="color:#f92672">-</span>u origin master</code></pre></div>
+<ul>
+<li>之后每次修改完网站内容后只需运行以下命令即可同步更新网站</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">hugo <span style="color:#75715e">#一定要先生成静态页面</span>
+cd public
+git add <span style="color:#f92672">-</span>A
+git commit <span style="color:#f92672">-</span>m <span style="color:#e6db74">&#34;你的评论&#34;</span>
+git push <span style="color:#f92672">-</span>u origin master</code></pre></div>
+<p>※这里提示一下，可以通过以下命令修改每次评论时的昵称和邮箱，昵称会显示在Github里。如若不修改则是默认该电脑的用户名和邮箱地址。在输完<code>git commit -m &quot;你的评论&quot;</code>命令之后，也会看到这样的提示</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">git config <span style="color:#f92672">--</span><span style="color:#66d9ef">global</span> user<span style="color:#f92672">.</span>name <span style="color:#e6db74">&#34;你的username&#34;</span>
+git config <span style="color:#f92672">--</span><span style="color:#66d9ef">global</span> user<span style="color:#f92672">.</span>email <span style="color:#ae81ff">123456</span><span style="color:#a6e22e">@example.com</span></code></pre></div>
 <h2 id="后记">后记</h2>
 
-<p>目前博客的基本布局已经定好，接下来如果在修改主题或者添加内容方面又遇到什么问题的话，就会在这篇文章内更新。</p>
+<p>使用Hugo和Github Pages创建网站的过程还是十分方便迅速的，非常推荐大家有空可以建个试试~</p>
 
 <h2 id="参考文献">参考文献</h2>
 
-<p><a href="https://gohugo.io/">Hugo官网</a><br />
+<p><a href="https://gohugo.io/getting-started/quick-start/">Hugo官网</a><br />
 <a href="https://www.gohugo.org/">Hugo中文文档</a><br />
-<a href="https://laozhu.me/post/hugo-nuo-theme/">本站 Hugo 主题 Nuo 正式上线！</a><br />
-<a href="https://carrie-lai.github.io/post/createhugoblog/">使用Hugo+Github Pages建置Blog</a><br />
-<a href="https://www.webfx.com/tools/emoji-cheat-sheet/">EMOJI CHEAT SHEET</a></p></article>
+<a href="https://carrie-lai.github.io/post/createhugoblog/">使用Hugo+Github Pages建置Blog</a></p></article>
     <footer class="post-footer">
       
       <ul class="post-tags">

@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you wish to quote or reproduce.</copyright>
-    <lastBuildDate>Thu, 27 Jun 2019 22:45:38 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jul 2019 00:01:39 +0900</lastBuildDate>
     
 	<atom:link href="https://orangebee.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -36,6 +36,24 @@ About this site 做这个博客的契机是发现同研究室的一个很厉害�
 このサイトを作ったきっかけは上で述べました．
 このサイトの目的についてまだ考えているので，決まったら更新します．
 THEME: hugo-nuo  · ICON: by me (with orange material from Internet)</description>
+    </item>
+    
+    <item>
+      <title>利用python爬虫生成微信好友个性签名词云图</title>
+      <link>https://orangebee.github.io/post/wechat_analyse/</link>
+      <pubDate>Tue, 09 Jul 2019 00:01:39 +0900</pubDate>
+      
+      <guid>https://orangebee.github.io/post/wechat_analyse/</guid>
+      <description>&lt;p&gt;利用网上教程做了张基于python的朋友圈个性签名的词云图。整个过程还是非常快速的，并且让我对爬虫产生了一点兴趣，因此想要记录下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用Hugo和Github Pages搭建个人博客</title>
+      <link>https://orangebee.github.io/post/hugo&#43;githubpage/</link>
+      <pubDate>Thu, 04 Jul 2019 23:12:37 +0900</pubDate>
+      
+      <guid>https://orangebee.github.io/post/hugo&#43;githubpage/</guid>
+      <description>&lt;p&gt;记录使用Hugo和Github Pages建站的基本过程，方便以后浏览。&lt;/p&gt;</description>
     </item>
     
     <item>
