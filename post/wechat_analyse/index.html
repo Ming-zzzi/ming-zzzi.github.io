@@ -231,10 +231,116 @@
     </header>
     <article class="post-content"><p>利用网上教程做了张基于python的朋友圈个性签名的词云图。整个过程还是非常快速的，并且让我对爬虫产生了一点兴趣，因此想要记录下。</p>
 
-<p><img src = /media/wechat_wordcloud.jpg width = "50%"></p>
+<h2 id="运行环境">运行环境</h2>
 
-<p>制作的词云图如上~<br />
-详细内容敬请期待！</p></article>
+<ul>
+<li>MacOS系统</li>
+<li>使用Anaconda自带的Jupyter写python代码</li>
+</ul>
+
+<h2 id="准备工作">准备工作</h2>
+
+<p>一般需要事先安装以下几个包：</p>
+
+<ul>
+<li>numpy</li>
+<li>matplotlib</li>
+<li>pandas</li>
+<li>itchat</li>
+<li>jieba</li>
+<li>wordcloud</li>
+</ul>
+
+<h3 id="numpy">NumPy</h3>
+
+<p>NumPy是一个用python进行科学计算的基本扩展包，支持大量的维度数组与矩阵运算。通过pip命令可以快速安装</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">pip install numpy </code></pre></div>
+<p>更多信息请看<a href="https://www.numpy.org.cn/">NumPy中文文档</a></p>
+
+<h3 id="matplotlib">Matplotlib</h3>
+
+<p>Matplotlib是一个基于python及NumPy包的绘图扩展包。同样可以通过pip命令快速安装</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">pip install matplotlib</code></pre></div>
+<p>更多信息请看<a href="https://www.matplotlib.org.cn/">Matplotlib中文文档</a></p>
+
+<h3 id="pandas">Pandas</h3>
+
+<p>Pandas是一个为python提供数据结构和数据分析工具的扩展包，可以通过conda命令快速安装</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">conda install pandas</code></pre></div>
+<p>更多信息请看<a href="https://www.pypandas.cn/">Pandas中文文档</a></p>
+
+<h3 id="itchat">Itchat</h3>
+
+<p>Itchat是一个开源的微信个人号接口，需要用他来登录微信提取信息，可以通过pip命令快速安装</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">pip install itchat</code></pre></div>
+<p>更多信息请看<a href="https://itchat.readthedocs.io">itchat项目简介</a></p>
+
+<h3 id="jieba">Jieba</h3>
+
+<p>Jieba是一个中文分词扩展包，可以通过conda命令进行安装</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">conda install <span style="color:#f92672">-</span>c conda<span style="color:#f92672">-</span>forge jieba</code></pre></div>
+<p>更多信息请看<a href="https://github.com/fxsjy/jieba">jieba README.md</a></p>
+
+<h3 id="wordcloud">WordCloud</h3>
+
+<p>WordCloud是一个对文本中出现频率较高的“关键词”予以视觉化的展现的扩展包。可以通过conda命令进行安装</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">conda install <span style="color:#f92672">-</span>c conda<span style="color:#f92672">-</span>forge wordcloud</code></pre></div>
+<p>更多信息请看<a href="https://github.com/amueller/word_cloud">WordCloud README.md</a></p>
+
+<h2 id="具体代码">具体代码</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#f92672">import</span> itchat
+<span style="color:#f92672">import</span> re
+<span style="color:#f92672">import</span> jieba  <span style="color:#75715e"># jieba分词</span>
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">from</span> wordcloud <span style="color:#f92672">import</span> WordCloud, ImageColorGenerator <span style="color:#75715e"># wordcloud词云</span>
+<span style="color:#f92672">import</span> os
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">import</span> PIL.Image <span style="color:#f92672">as</span> Image
+<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+
+<span style="color:#75715e"># 登录微信</span>
+itchat<span style="color:#f92672">.</span>login()
+friends <span style="color:#f92672">=</span> itchat<span style="color:#f92672">.</span>get_friends(update<span style="color:#f92672">=</span>True)[<span style="color:#ae81ff">0</span>:]
+tList <span style="color:#f92672">=</span> []
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> friends:
+    signature <span style="color:#f92672">=</span> i[<span style="color:#e6db74">&#34;Signature&#34;</span>]<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#34; &#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#34;span&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#34;class&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#34;emoji&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>)
+    rep <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">&#34;1f\d.+&#34;</span>)
+    signature <span style="color:#f92672">=</span> rep<span style="color:#f92672">.</span>sub(<span style="color:#e6db74">&#34;&#34;</span>, signature)
+    tList<span style="color:#f92672">.</span>append(signature)
+<span style="color:#75715e"># 拼接字符串</span>
+text <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">.</span>join(tList)
+wordlist_jieba <span style="color:#f92672">=</span> jieba<span style="color:#f92672">.</span>cut(text, cut_all<span style="color:#f92672">=</span>True)
+wl_space_split <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">.</span>join(wordlist_jieba)
+coloring <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>array(Image<span style="color:#f92672">.</span>open(<span style="color:#e6db74">&#34;/Users/ming/Desktop/hugo_pic.png&#34;</span>)) <span style="color:#75715e">#词云图将基于该路径的本地图片生成</span>
+my_wordcloud <span style="color:#f92672">=</span> WordCloud(background_color<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;white&#34;</span>, max_words<span style="color:#f92672">=</span><span style="color:#ae81ff">2000</span>,
+mask<span style="color:#f92672">=</span>coloring, max_font_size<span style="color:#f92672">=</span><span style="color:#ae81ff">60</span>, random_state<span style="color:#f92672">=</span><span style="color:#ae81ff">42</span>, scale<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>,
+font_path<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/Library/Fonts/Songti.ttc&#34;</span>)<span style="color:#f92672">.</span>generate(wl_space_split) <span style="color:#75715e">#设定生成字体</span>
+
+<span style="color:#75715e"># 将词云图保存到本地</span>
+my_wordcloud<span style="color:#f92672">.</span>to_file(<span style="color:#e6db74">&#34;wechat_keyword.jpg&#34;</span>) 
+
+<span style="color:#75715e"># 或者可以直接展示词云图</span>
+<span style="color:#75715e">#image_colors = ImageColorGenerator(coloring)</span>
+<span style="color:#75715e">#plt.imshow(my_wordcloud.recolor(color_func=image_colors))</span>
+<span style="color:#75715e">#plt.imshow(my_wordcloud)</span>
+<span style="color:#75715e">#plt.axis(&#34;off&#34;)</span>
+<span style="color:#75715e">#plt.show()</span></code></pre></div>
+<h2 id="代码运行之后">代码运行之后</h2>
+
+<p>用微信扫描程序自动生成的二维码，让微信登录进去。之后就可以通过读取微信内好友信息生成词云图了<br />
+例如我生成的词云图如下所示：
+<img src = /media/wechat_wordcloud.jpg width = "50%"></p>
+
+<h2 id="后记">后记</h2>
+
+<p>因为我们读取了微信内所有好友的信息，除了生成词云图，其实还可以进行许多其他操作，例如分析好友中的男女比例，城市分布等等。<br />
+另外他是如何自动生成二维码这一点我还是挺好奇的，接下来想要查一下爬虫和itchat包的相关知识</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p><a href="https://blog.csdn.net/qq_40925239/article/details/84204773">一件有趣的事：用Python爬了自己的微信朋友圈</a><br />
+<a href="https://blog.csdn.net/feng98ren/article/details/80343856">用Python对微信好友进行分析</a><br />
+<a href="https://www.gaozhengjie.cn/archives/155/">基于Python的微信朋友圈数据可视化分析之个性签名</a></p></article>
     <footer class="post-footer">
       
       <ul class="post-tags">
