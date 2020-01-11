@@ -13,26 +13,43 @@
   </url>
   
   <url>
+    <loc>https://orangebee.github.io/tags/2019/</loc>
+    <lastmod>2019-12-31T20:41:07+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://orangebee.github.io/post/2019summary/</loc>
+    <lastmod>2019-12-31T20:41:07+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://orangebee.github.io/categories/</loc>
-    <lastmod>2019-07-09T00:01:39+09:00</lastmod>
+    <lastmod>2019-12-31T20:41:07+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://orangebee.github.io/</loc>
-    <lastmod>2019-07-09T00:01:39+09:00</lastmod>
+    <lastmod>2019-12-31T20:41:07+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://orangebee.github.io/post/</loc>
-    <lastmod>2019-07-09T00:01:39+09:00</lastmod>
+    <lastmod>2019-12-31T20:41:07+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://orangebee.github.io/tags/</loc>
-    <lastmod>2019-07-09T00:01:39+09:00</lastmod>
+    <lastmod>2019-12-31T20:41:07+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://orangebee.github.io/categories/dairy/</loc>
+    <lastmod>2019-12-31T20:41:07+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -84,12 +101,6 @@
   <url>
     <loc>https://orangebee.github.io/post/hello_world/</loc>
     <lastmod>2019-06-21T00:01:22+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://orangebee.github.io/categories/dairy/</loc>
-    <lastmod>2019-06-21T00:01:22+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>

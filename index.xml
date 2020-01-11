@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you wish to quote or reproduce.</copyright>
-    <lastBuildDate>Tue, 09 Jul 2019 00:01:39 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 31 Dec 2019 20:41:07 +0900</lastBuildDate>
     
 	<atom:link href="https://orangebee.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -29,15 +29,21 @@
       <guid>https://orangebee.github.io/about/</guid>
       <description>⚡️ About Me 在日本留学的研二狗
 爱美食，爱唱歌，爱二次元
-卒業できるように頑張っている中国人留学生
-趣味は食べること，カラオケ，写真撮影など
-⚡️ About the Blog 本博客主要用于记录学习中遇到的一些计算机相关的知识点和技术性总结。
-本ブログの主な目的は，勉強中にあったコンピューターに関する知識と技術性的なまとめを記録することである．主に中国語で書きます．
+A master student who studied in Japan, likes food, singsing and animation.
+⚡️ About the Blog 本博客主要用于记录学习中遇到的一些计算机相关的知识点和技术性总结。 当然，我也有可能会写一些小日记啦。
+The main idea of the blog is to record some knowledge points and technological summary during computer science studying. Of course, I might will also write some dairy.
 ⚡️ About the Links はてなブログ：用日语记录自己的留日生活
 歌ってみた：在bilibili中上传了自己的翻唱歌曲，主要是日翻
-はてなブログ：日本語で自分の日常生活を記録するもの
-歌ってみた：bilibiliで「歌ってみた」の動画をアップしているもの
-THEME: hugo-nuo  · ICON: by me (with orange material from Internet)</description>
+はてなブログ：Record my daily life in Japanese. 歌ってみた：The bilibili site where I put my singsing vedio.</description>
+    </item>
+    
+    <item>
+      <title>2019年总结</title>
+      <link>https://orangebee.github.io/post/2019summary/</link>
+      <pubDate>Tue, 31 Dec 2019 20:41:07 +0900</pubDate>
+      
+      <guid>https://orangebee.github.io/post/2019summary/</guid>
+      <description>&lt;p&gt;2019年总结和2020年小期待。&lt;/p&gt;</description>
     </item>
     
     <item>
