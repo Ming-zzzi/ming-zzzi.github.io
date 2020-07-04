@@ -13,7 +13,7 @@
     
     
     <item>
-      <title>dairy</title>
+      <title>Dairy</title>
       <link>https://orangebee.github.io/categories/dairy/</link>
       <pubDate>Tue, 31 Dec 2019 20:41:07 +0900</pubDate>
       
@@ -22,11 +22,20 @@
     </item>
     
     <item>
-      <title>technical summary</title>
-      <link>https://orangebee.github.io/categories/technical-summary/</link>
+      <title>Data Analysis</title>
+      <link>https://orangebee.github.io/categories/data-analysis/</link>
       <pubDate>Tue, 09 Jul 2019 00:01:39 +0900</pubDate>
       
-      <guid>https://orangebee.github.io/categories/technical-summary/</guid>
+      <guid>https://orangebee.github.io/categories/data-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>https://orangebee.github.io/categories/blog/</link>
+      <pubDate>Thu, 04 Jul 2019 23:12:37 +0900</pubDate>
+      
+      <guid>https://orangebee.github.io/categories/blog/</guid>
       <description></description>
     </item>
     
