@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hugo on Orange Bee</title>
-    <link>https://orangebee.github.io/tags/hugo/</link>
+    <link>https://ming-zzzi.github.io/tags/hugo/</link>
     <description>Recent content in hugo on Orange Bee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you wish to quote or reproduce.</copyright>
     <lastBuildDate>Thu, 04 Jul 2019 23:12:37 +0900</lastBuildDate>
     
-	<atom:link href="https://orangebee.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ming-zzzi.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>用Hugo和Github Pages搭建个人博客</title>
-      <link>https://orangebee.github.io/post/hugo&#43;githubpage/</link>
+      <link>https://ming-zzzi.github.io/post/hugo&#43;githubpage/</link>
       <pubDate>Thu, 04 Jul 2019 23:12:37 +0900</pubDate>
       
-      <guid>https://orangebee.github.io/post/hugo&#43;githubpage/</guid>
+      <guid>https://ming-zzzi.github.io/post/hugo&#43;githubpage/</guid>
       <description>&lt;p&gt;记录使用Hugo和Github Pages建站的基本过程，方便以后浏览。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Hugo建站填坑记录</title>
-      <link>https://orangebee.github.io/post/hugo_problems_summary/</link>
+      <link>https://ming-zzzi.github.io/post/hugo_problems_summary/</link>
       <pubDate>Thu, 27 Jun 2019 22:45:38 +0900</pubDate>
       
-      <guid>https://orangebee.github.io/post/hugo_problems_summary/</guid>
+      <guid>https://ming-zzzi.github.io/post/hugo_problems_summary/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 
 &lt;p&gt;这篇文章记录了在用hugo建站过程时发生的问题和原因分析。&lt;/p&gt;</description>
@@ -34,10 +34,10 @@
     
     <item>
       <title>Hello World!</title>
-      <link>https://orangebee.github.io/post/hello_world/</link>
+      <link>https://ming-zzzi.github.io/post/hello_world/</link>
       <pubDate>Fri, 21 Jun 2019 00:01:22 +0900</pubDate>
       
-      <guid>https://orangebee.github.io/post/hello_world/</guid>
+      <guid>https://ming-zzzi.github.io/post/hello_world/</guid>
       <description>&lt;h2 id=&#34;世界你好&#34;&gt;世界你好&lt;/h2&gt;</description>
     </item>
     

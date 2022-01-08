@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>crawler on Orange Bee</title>
-    <link>https://orangebee.github.io/tags/crawler/</link>
+    <link>https://ming-zzzi.github.io/tags/crawler/</link>
     <description>Recent content in crawler on Orange Bee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you wish to quote or reproduce.</copyright>
     <lastBuildDate>Tue, 09 Jul 2019 00:01:39 +0900</lastBuildDate>
     
-	<atom:link href="https://orangebee.github.io/tags/crawler/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ming-zzzi.github.io/tags/crawler/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>利用python爬虫生成微信好友个性签名词云图</title>
-      <link>https://orangebee.github.io/post/wechat_analyse/</link>
+      <link>https://ming-zzzi.github.io/post/wechat_analyse/</link>
       <pubDate>Tue, 09 Jul 2019 00:01:39 +0900</pubDate>
       
-      <guid>https://orangebee.github.io/post/wechat_analyse/</guid>
+      <guid>https://ming-zzzi.github.io/post/wechat_analyse/</guid>
       <description>&lt;p&gt;利用网上教程做了张基于python的朋友圈个性签名的词云图。整个过程还是非常快速的，并且让我对爬虫产生了一点兴趣，因此想要记录下。&lt;/p&gt;</description>
     </item>
     

@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Orange Bee</title>
-    <link>https://orangebee.github.io/</link>
+    <link>https://ming-zzzi.github.io/</link>
     <description>Recent content on Orange Bee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you wish to quote or reproduce.</copyright>
     <lastBuildDate>Sat, 04 Jul 2020 15:25:12 +0900</lastBuildDate>
     
-	<atom:link href="https://orangebee.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ming-zzzi.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Links</title>
-      <link>https://orangebee.github.io/links/</link>
+      <link>https://ming-zzzi.github.io/links/</link>
       <pubDate>Sun, 23 Jun 2019 03:31:34 +0900</pubDate>
       
-      <guid>https://orangebee.github.io/links/</guid>
+      <guid>https://ming-zzzi.github.io/links/</guid>
       <description>添加自己的相关链接</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://orangebee.github.io/about/</link>
+      <link>https://ming-zzzi.github.io/about/</link>
       <pubDate>Sat, 22 Jun 2019 02:16:19 +0900</pubDate>
       
-      <guid>https://orangebee.github.io/about/</guid>
+      <guid>https://ming-zzzi.github.io/about/</guid>
       <description>About Blog  ⭐️ Learn, Record and become Better
  About Author  Working in a Computer Software Company.
  Interested in Database, Java, Singing, Piano etc.
@@ -36,46 +36,46 @@ ICON: by me (with orange material from Internet)</description>
     
     <item>
       <title>使用双重身份验证（2FA）后无法push到仓库的解决办法</title>
-      <link>https://orangebee.github.io/post/githubaccesstoken/</link>
+      <link>https://ming-zzzi.github.io/post/githubaccesstoken/</link>
       <pubDate>Sat, 04 Jul 2020 15:25:12 +0900</pubDate>
       
-      <guid>https://orangebee.github.io/post/githubaccesstoken/</guid>
+      <guid>https://ming-zzzi.github.io/post/githubaccesstoken/</guid>
       <description>&lt;p&gt;关于GitHub使用双重身份验证后无法正常使用push的问题.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>2019年总结</title>
-      <link>https://orangebee.github.io/post/2019summary/</link>
+      <link>https://ming-zzzi.github.io/post/2019summary/</link>
       <pubDate>Tue, 31 Dec 2019 20:41:07 +0900</pubDate>
       
-      <guid>https://orangebee.github.io/post/2019summary/</guid>
+      <guid>https://ming-zzzi.github.io/post/2019summary/</guid>
       <description>&lt;p&gt;2019年总结和2020年小期待。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>利用python爬虫生成微信好友个性签名词云图</title>
-      <link>https://orangebee.github.io/post/wechat_analyse/</link>
+      <link>https://ming-zzzi.github.io/post/wechat_analyse/</link>
       <pubDate>Tue, 09 Jul 2019 00:01:39 +0900</pubDate>
       
-      <guid>https://orangebee.github.io/post/wechat_analyse/</guid>
+      <guid>https://ming-zzzi.github.io/post/wechat_analyse/</guid>
       <description>&lt;p&gt;利用网上教程做了张基于python的朋友圈个性签名的词云图。整个过程还是非常快速的，并且让我对爬虫产生了一点兴趣，因此想要记录下。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>用Hugo和Github Pages搭建个人博客</title>
-      <link>https://orangebee.github.io/post/hugo&#43;githubpage/</link>
+      <link>https://ming-zzzi.github.io/post/hugo&#43;githubpage/</link>
       <pubDate>Thu, 04 Jul 2019 23:12:37 +0900</pubDate>
       
-      <guid>https://orangebee.github.io/post/hugo&#43;githubpage/</guid>
+      <guid>https://ming-zzzi.github.io/post/hugo&#43;githubpage/</guid>
       <description>&lt;p&gt;记录使用Hugo和Github Pages建站的基本过程，方便以后浏览。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Hugo建站填坑记录</title>
-      <link>https://orangebee.github.io/post/hugo_problems_summary/</link>
+      <link>https://ming-zzzi.github.io/post/hugo_problems_summary/</link>
       <pubDate>Thu, 27 Jun 2019 22:45:38 +0900</pubDate>
       
-      <guid>https://orangebee.github.io/post/hugo_problems_summary/</guid>
+      <guid>https://ming-zzzi.github.io/post/hugo_problems_summary/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 
 &lt;p&gt;这篇文章记录了在用hugo建站过程时发生的问题和原因分析。&lt;/p&gt;</description>
@@ -83,10 +83,10 @@ ICON: by me (with orange material from Internet)</description>
     
     <item>
       <title>Hello World!</title>
-      <link>https://orangebee.github.io/post/hello_world/</link>
+      <link>https://ming-zzzi.github.io/post/hello_world/</link>
       <pubDate>Fri, 21 Jun 2019 00:01:22 +0900</pubDate>
       
-      <guid>https://orangebee.github.io/post/hello_world/</guid>
+      <guid>https://ming-zzzi.github.io/post/hello_world/</guid>
       <description>&lt;h2 id=&#34;世界你好&#34;&gt;世界你好&lt;/h2&gt;</description>
     </item>
     
